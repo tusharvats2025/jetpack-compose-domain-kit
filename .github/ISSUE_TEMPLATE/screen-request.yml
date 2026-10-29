@@ -1,0 +1,24 @@
+name: Request a screen
+description: Ask for a screen or a variant that isn't in the kit yet.
+title: "[Request] "
+labels: [screen-request]
+body:
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options: [Login, Onboarding, Profile, Settings, Checkout, Empty and error, Something new]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What should the screen do?
+      description: The job it does for the user, and which app or industry it's for.
+    validations:
+      required: true
+  - type: textarea
+    id: reference
+    attributes:
+      label: Reference
+      description: A screenshot or link to an app that does it well (optional).

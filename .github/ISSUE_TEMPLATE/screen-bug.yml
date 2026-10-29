@@ -1,0 +1,26 @@
+name: Report a problem with a screen
+description: It doesn't compile, looks wrong, or behaves badly.
+title: "[Bug] "
+labels: [bug]
+body:
+  - type: input
+    id: screen
+    attributes:
+      label: Screen
+      description: The function name, for example LoginCenteredLogo.
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What's wrong?
+      options: [Doesn't compile, Looks different from the preview, Accessibility, Dark mode, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: The error or a screenshot, your Compose BOM version, and the device or emulator.
+    validations:
+      required: true
